@@ -16,11 +16,14 @@ class App extends Component {
 
           <a href="https://www.google.com">Google your deck</a>
           <main>
-            <button>Liked this board</button>
-            <button>+</button>
-            <button>hated this board</button>
-
-            <Good />
+            <div>
+              <button>Liked this board</button>
+              <button>+</button>
+              <button>hated this board</button>
+            </div>
+            <div>
+              <Good />
+            </div>
           </main>
         </div>
       </body>
