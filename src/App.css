@@ -1,33 +1,49 @@
-.App {
-  text-align: center;
+body {
+  font-family: MaisonNeue, -apple-system, system-ui, Helvetica, Arial,
+    sans-serif;
+  background: #e8edfb;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-height: 200px;
 }
-
-.App-header {
+header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 30vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  background: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  background: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background: red;
+  border-radius: 20px;
+  display: inline-block;
+  height: 30px;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: lightcoral;
 }
