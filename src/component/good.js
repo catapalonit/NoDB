@@ -16,11 +16,18 @@ export default class Good extends Component {
     });
   }
 
+  updateData(val, deck) {
+    axios.put(`api/data?id=${val}`, { deck }).then(results => {
+      this.setState({ allDecks: results.data });
+    });
+  }
+
   render() {
     return (
       <div>
         {this.state.allDecks.map((deck, i) => (
           // key of i keeps the warning from saying each child needs a unique key prop
+
           <article key={i}>
             <img src={deck.image} alt="deck" />
             <h2>{deck.brand}</h2>

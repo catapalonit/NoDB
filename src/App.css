@@ -39,7 +39,7 @@ a {
   background: yellow;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 10vh;
 }
 
@@ -65,4 +65,5 @@ article {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: black solid 2px;
 }

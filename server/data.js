@@ -28,7 +28,7 @@ let allDecks = [
     pro: "Lizard King",
     model: "Permanent Vacation",
     image:
-      "https://cdn.ccs.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/A/Q/AQ70DD0-1.1506664642.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/71tEgYkkHeL._SY355_.jpg",
     width: '8.125"'
   }
 ];

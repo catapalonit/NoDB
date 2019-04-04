@@ -6,4 +6,7 @@ module.exports = {
   getData: function(req, res) {
     res.status(200).json(allDecks);
   }
+  //   addData: function(req, res) {
+  //       onClick add the fuckin deck
+  //   }
 };
