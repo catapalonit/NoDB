@@ -8,22 +8,6 @@ import { Button } from "./component/button";
 // import axios from "axios";
 
 class App extends Component {
-  // constructor(props){}
-  //   super(props)
-
-  //     this.state ={
-
-  //     }
-
-  //     addDeck(){
-  // this.setState({
-  //     // goodDeck: this.state.deck
-  // })    }
-
-  //     deleteDeck(){
-  //       //add a bad deck
-  //     }
-
   render() {
     return (
       <div className="body">
