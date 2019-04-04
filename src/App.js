@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Good from "./component/good";
+import Inputfield from "./component/inputfield";
 import { Header } from "./component/header";
 import { Searchbar } from "./component/searchbar";
 import { Button } from "./component/button";
@@ -19,6 +20,7 @@ class App extends Component {
       size: ""
     };
   }
+
   render() {
     return (
       <div className="body">
@@ -29,37 +31,7 @@ class App extends Component {
           <div />
           <main>
             <div>
-              <input
-                type="img"
-                value={this.state.img}
-                placeholder="Image"
-                onChange={this.updateImg}
-              />
-              <input
-                type="text"
-                value={this.state.brand}
-                placeholder="Brand"
-                onChange={this.updateBrand}
-              />
-              <input
-                type="text"
-                value={this.state.pro}
-                placeholder="Pro"
-                onChange={this.updatePro}
-              />
-              <input
-                type="text"
-                value={this.state.model}
-                placeholder="Model"
-                onChange={this.updateModel}
-              />
-              <input
-                type="text"
-                value={this.state.size}
-                placeholder="Size"
-                onChange={this.updateSize}
-              />
-
+              <Inputfield />
               <Good />
             </div>
           </main>

@@ -34,6 +34,7 @@ export default class Good extends Component {
             <h3>{deck.pro}</h3>
             <h3>{deck.model}</h3>
             <h3>{deck.width}</h3>
+            <h3>{deck.comments}</h3>
           </article>
         ))}
       </div>
