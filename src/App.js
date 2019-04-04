@@ -1,32 +1,44 @@
 import React, { Component } from "react";
-import logo from "./img/logodeckorator.png";
 import "./App.css";
-import Good from "./component/good.js";
+import Good from "./component/good";
+import { Header } from "./component/header";
+import { Searchbar } from "./component/searchbar";
+import { Button } from "./component/button";
+
 // import axios from "axios";
 
 class App extends Component {
+  // constructor(props){}
+  //   super(props)
+
+  //     this.state ={
+
+  //     }
+
+  //     addDeck(){
+  // this.setState({
+  //     // goodDeck: this.state.deck
+  // })    }
+
+  //     deleteDeck(){
+  //       //add a bad deck
+  //     }
+
   render() {
     return (
-      <body>
+      <div className="body">
         <div>
-          <header className="header">
-            <img src={logo} className="logo" alt="logo" />
-            <h1>Welcome to Deckorator</h1>
-          </header>
-
-          <a href="https://www.google.com">Google your deck</a>
+          <Header />
+          <Searchbar />
+          <Button />
+          <div />
           <main>
-            <div>
-              <button>Liked this board</button>
-              <button>+</button>
-              <button>hated this board</button>
-            </div>
             <div>
               <Good />
             </div>
           </main>
         </div>
-      </body>
+      </div>
     );
   }
 }
