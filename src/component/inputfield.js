@@ -85,7 +85,7 @@ export default class Inputfield extends Component {
                     <input type="text" name="model" defaultValue={this.state.model} placeholder="Model" onChange={this.handleChange.bind(this)} />
                     <input type="text" name="image" defaultValue={this.state.image} placeholder="Image" onChange={this.handleChange.bind(this)} />
                     <input type="text" name="size" defaultValue={this.state.size} placeholder="Size" onChange={this.handleChange.bind(this)} />
-                    {/* <br /> */}
+
                     <input className="commentField" type="text" name="comments" defaultValue={this.state.comments} placeholder="Comments" onChange={this.handleChange.bind(this)} />
                     <br />
                     <button className="submitButton" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>

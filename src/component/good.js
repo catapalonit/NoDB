@@ -9,9 +9,6 @@ export default class Good extends Component {
     };
   }
 
-
-
-
   render() {
     return (
       <div>
