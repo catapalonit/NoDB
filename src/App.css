@@ -27,6 +27,7 @@ header {
 
 a {
   background: #fc00ff;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,4 +67,27 @@ article {
   justify-content: center;
   flex-direction: column;
   border: black solid 2px;
+}
+
+form {
+  background: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.commentField {
+  width: 400px;
+}
+
+.submitButton { 
+  background: yellow;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
 }
