@@ -12,14 +12,25 @@ export default class Inputfield extends Component {
             model: "",
             image: "",
             size: "",
-            comments: ""
+            comments: "",
+            likesBoard: false,
+            allDecks: []
         };
+
 
         this.handleChange = this.handleChange.bind(this)
         this.handleGoodSubmit = this.handleGoodSubmit.bind(this);
         this.handleBadSubmit = this.handleBadSubmit.bind(this);
 
     }
+
+    componentDidMount() {
+        axios.get("/api/data").then(results => {
+            console.log(results);
+            this.setState({ allDecks: results.data });
+        });
+    }
+
 
     handleChange(e) {
         //image: vfdknd
@@ -36,10 +47,11 @@ export default class Inputfield extends Component {
             pro: this.state.pro,
             model: this.state.model,
             size: this.state.size,
-            comments: this.state.comments
+            comments: this.state.comments,
+            likesBoard: this.state.likesBoard
         }).then(response => {
             console.log(response)
-
+            //update allDecks in state
         });
     }
     handleBadSubmit(e) {
@@ -51,15 +63,20 @@ export default class Inputfield extends Component {
             pro: this.state.pro,
             model: this.state.model,
             size: this.state.size,
-            comments: this.state.comments
+            comments: this.state.comments,
+            dislikesBoard: this.state.dislikesBoard
         }).then(response => {
             console.log(response)
+            //update allDecks in state
 
         });
     }
 
 
     render() {
+        let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} />)
+        let dislikesBoard = this.state.allDecks.filter(val => val.likesBoard === false).map(val => <Good deck={val} />)
+        let totalBoard = this.state.allDecks.map(val => <Good deck={val} />)
         return (
             <div>
                 <form>
@@ -74,33 +91,12 @@ export default class Inputfield extends Component {
                     <button className="submitButton" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>
                     <button className="submitButton" onClick={this.handleBadSubmit.bind(this)} >I Didn't Like This Board</button>
                 </form>
-                <Good />
+                {/* <Good /> */}
+                {totalBoard}
+                {likesBoard}
+                {dislikesBoard}
 
             </div>
         );
     }
 }
-
-
-
-/* <input className="submitButton" type="submit" value="I liked this board" onChange={this.handleSubmit.bind(this)} /> */
-                // <input className="submitButton" type="submit" value="I didn't like this board" onChange={this.handleSubmit.bind(this)} />
-
-  // updateImg(event) {
-    //     this.setState({ img: event.target.value })
-    // }
-    // updateBrand(event) {
-    //     this.setState({ brand: event.target.value })
-    // }
-    // updatePro(event) {
-    //     this.setState({ pro: event.target.value })
-    // }
-    // updateModel(event) {
-    //     this.setState({ model: event.target.value })
-    // }
-    // updateSize(event) {
-    //     this.setState({ size: event.target.value })
-    // }
-    // updateComments(event) {
-    //     this.setState({ comments: event.target.value })
-    // }

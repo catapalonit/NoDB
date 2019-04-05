@@ -6,7 +6,8 @@ let allDecks = [
     image:
       "https://www.warehouseskateboards.com/images/products/preview/1DBAKJACISK847Y.jpg",
     size: "8.47",
-    comments: ""
+    comments: "",
+    likesBoard: true
   },
   {
     brand: "Mother",
@@ -15,7 +16,9 @@ let allDecks = [
     image:
       "http://cdn.companybe.com/cowtown/product_photos/rd_images/rd_quasi-skateboards-bukkake-deck-8.375.jpg",
     size: "8.6",
-    comments: ""
+    comments: "",
+    likesBoard: false
+
   },
   {
     brand: "Deathwish",
@@ -24,11 +27,12 @@ let allDecks = [
     image:
       "https://images-na.ssl-images-amazon.com/images/I/71tEgYkkHeL._SY355_.jpg",
     size: "8.125",
-    comments: ""
+    comments: "",
+    likesBoard: true
+
   }
 ];
 
-// let badDecks = []
 
 
 module.exports = {
