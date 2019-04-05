@@ -76,7 +76,7 @@ export default class Inputfield extends Component {
     render() {
         let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} />)
         let dislikesBoard = this.state.allDecks.filter(val => val.likesBoard === false).map(val => <Good deck={val} />)
-        let totalBoard = this.state.allDecks.map(val => <Good deck={val} />)
+        // let totalBoard = this.state.allDecks.map(val => <Good deck={val} />)
         return (
             <div>
                 <form>
@@ -91,11 +91,17 @@ export default class Inputfield extends Component {
                     <button className="submitButton" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>
                     <button className="submitButton" onClick={this.handleBadSubmit.bind(this)} >I Didn't Like This Board</button>
                 </form>
-                {/* <Good /> */}
-                {totalBoard}
-                {likesBoard}
-                {dislikesBoard}
-
+                {/* {totalBoard} */}
+                <div className="goodBoardsOuter">
+                    <div className="goodBoards">
+                        {likesBoard}
+                    </div>
+                </div>
+                <div className="badBoardsOuter">
+                    <div className="badBoards">
+                        {dislikesBoard}
+                    </div>
+                </div>
             </div>
         );
     }

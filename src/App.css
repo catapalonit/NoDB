@@ -60,14 +60,14 @@ main {
   justify-content: center;
 }
 
-article {
+/* article {
   background: lightsalmon;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border: black solid 2px;
-}
+} */
 
 form {
   background: aqua;
@@ -90,4 +90,29 @@ form {
   justify-content: center;
   flex-direction: column;
   
+}
+
+.goodBoardsOuter {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border: black solid 2px;
+  width: 50vw;
+}
+
+.goodBoards {
+  background: rgb(42, 179, 172);
+}
+
+.badBoardsOuter {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  border: black solid 2px;
+
+}
+
+.badBoards {
+  background: lightsalmon;
+ 
 }
