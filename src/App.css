@@ -61,12 +61,16 @@ main {
 }
 
 /* article {
-  background: lightsalmon;
+   background: yellow;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: black solid 2px;
+  justify-content: space-around;
+  height: 10vh;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
 } */
 
 form {
@@ -91,7 +95,9 @@ form {
   flex-direction: column;
   
 }
-
+.allBoards {
+  display: flex;
+}
 .goodBoardsOuter {
   display: flex;
   align-items: flex-start;
@@ -109,10 +115,16 @@ form {
   align-items: flex-end;
   flex-direction: column;
   border: black solid 2px;
+  width: 50vw;
 
 }
 
 .badBoards {
   background: lightsalmon;
+}
+
+.deleteButton {
+   background: none;
+  
  
 }

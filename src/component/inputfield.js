@@ -48,9 +48,11 @@ export default class Inputfield extends Component {
             model: this.state.model,
             size: this.state.size,
             comments: this.state.comments,
-            likesBoard: this.state.likesBoard
+            likesBoard: true
         }).then(response => {
             console.log(response)
+            // this.setState({ [e.target.name]: e.target.value })
+
             //update allDecks in state
         });
     }
@@ -64,9 +66,11 @@ export default class Inputfield extends Component {
             model: this.state.model,
             size: this.state.size,
             comments: this.state.comments,
-            dislikesBoard: this.state.dislikesBoard
+            likesBoard: false
         }).then(response => {
             console.log(response)
+            // this.setState({ [e.target.name]: e.target.value })
+
             //update allDecks in state
 
         });
@@ -88,18 +92,20 @@ export default class Inputfield extends Component {
 
                     <input className="commentField" type="text" name="comments" defaultValue={this.state.comments} placeholder="Comments" onChange={this.handleChange.bind(this)} />
                     <br />
-                    <button className="submitButton" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>
-                    <button className="submitButton" onClick={this.handleBadSubmit.bind(this)} >I Didn't Like This Board</button>
+                    <button className="submitButton" type="reset" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>
+                    <button className="submitButton" type="reset" onClick={this.handleBadSubmit.bind(this)} >I Didn't Like This Board</button>
                 </form>
                 {/* {totalBoard} */}
-                <div className="goodBoardsOuter">
-                    <div className="goodBoards">
-                        {likesBoard}
+                <div className="allBoards">
+                    <div className="goodBoardsOuter">
+                        <div className="goodBoards">
+                            {likesBoard}
+                        </div>
                     </div>
-                </div>
-                <div className="badBoardsOuter">
-                    <div className="badBoards">
-                        {dislikesBoard}
+                    <div className="badBoardsOuter">
+                        <div className="badBoards">
+                            {dislikesBoard}
+                        </div>
                     </div>
                 </div>
             </div>

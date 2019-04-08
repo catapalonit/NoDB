@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 
 export default class Good extends Component {
   constructor() {
@@ -20,6 +22,9 @@ export default class Good extends Component {
           <h3>{this.props.deck.model}</h3>
           <h3>{this.props.deck.size}</h3>
           <h3>{this.props.deck.comments}</h3>
+          <button className="deleteButton" onClick={() => axios.delete("/api/data/" + this.props.name)
+            .then(response => this.props.deleteData())}> Delete </button>
+
         </div>
       </div>
     );
