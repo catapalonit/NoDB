@@ -26,6 +26,8 @@ export default class Good extends Component {
             .then(response => this.props.deleteData())}> Delete </button>
 
         </div>
+        <br />
+        <br />
       </div>
     );
   }

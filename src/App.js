@@ -3,7 +3,7 @@ import "./App.css";
 import Inputfield from "./component/inputfield";
 import { Header } from "./component/header";
 import { Searchbar } from "./component/searchbar";
-import { Button } from "./component/button";
+import { Banner } from "./component/banner";
 
 // import axios from "axios";
 
@@ -26,7 +26,7 @@ class App extends Component {
         <div>
           <Header />
           <Searchbar />
-          <Button />
+          <Banner />
           <Inputfield />
           <div />
           <main>

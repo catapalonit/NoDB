@@ -60,19 +60,6 @@ main {
   justify-content: center;
 }
 
-/* article {
-   background: yellow;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 10vh;
-  background: yellow;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 10vh;
-} */
-
 form {
   background: aqua;
   display: flex;
@@ -99,10 +86,12 @@ form {
   display: flex;
 }
 .goodBoardsOuter {
+  background: rgb(42, 179, 172);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  border: black solid 2px;
+  /* border: black solid 2px; */
+  padding: 10px;
   width: 50vw;
 }
 
@@ -111,10 +100,12 @@ form {
 }
 
 .badBoardsOuter {
+  background: lightsalmon;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
-  border: black solid 2px;
+  /* border: black solid 2px; */
+  padding: 10px;
   width: 50vw;
 
 }
@@ -125,6 +116,21 @@ form {
 
 .deleteButton {
    background: none;
-  
- 
+}
+
+.banner {
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+}
+
+article {
+  background: yellow;
+  border: 0px;
+  border-radius: 20px;
+  display: inline-block;
+  height: 30px;
+  font-size: 30px;
 }
