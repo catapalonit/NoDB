@@ -2,6 +2,8 @@
 
 const { allDecks } = require("./data");
 
+let id = 4;
+
 module.exports = {
   getData: function (req, res) {
     res.status(200).json(allDecks);
@@ -9,7 +11,8 @@ module.exports = {
 
   addData: (req, res) => {
     console.log(req.body)
-    allDecks.push(req.body)
+    allDecks.push({ ...req.body, id })
+    id++;
     res.status(200).json(allDecks)
   },
 

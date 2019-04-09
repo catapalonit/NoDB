@@ -7,6 +7,7 @@ export default class Inputfield extends Component {
     constructor() {
         super();
         this.state = {
+            id: "",
             brand: "",
             pro: "",
             model: "",

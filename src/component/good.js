@@ -11,7 +11,13 @@ export default class Good extends Component {
     };
   }
 
-
+  // deleteDeck = (id) => {
+  //   axios.delete(`/api/data/${id}`, { data: { id } }).then(response => {
+  //     this.setState({
+  //       allDecks: response.data
+  //     })
+  //   })
+  // }
 
   render() {
     return (
@@ -24,8 +30,7 @@ export default class Good extends Component {
           <h3>{this.props.deck.model}</h3>
           <h3>{this.props.deck.size}</h3>
           <h3>{this.props.deck.comments}</h3>
-          <button className="deleteButton" onClick={() => axios.delete("/api/data" + this.props.name)
-            .then(response => this.props.deleteData())}> Delete </button>
+          <button className="deleteButton" > Delete </button>
 
         </div>
         <br />
@@ -38,10 +43,8 @@ export default class Good extends Component {
 
 //jonathons delete
 
-  // deleteDeck = (id) => {
-  //   axios.delete(`/api/data/${id}`, { data: {id}} ).then(response => {
-  //   this.setState({
-  //     allDecks.response.data
-  //   })
-  // })
-  // }
+
+
+
+  // <button className="deleteButton" onClick={() => axios.delete("/api/data" + this.props.name)
+  //           .then(response => this.props.deleteData())}> Delete </button>

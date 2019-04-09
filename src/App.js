@@ -5,12 +5,12 @@ import { Header } from "./component/header";
 import { Searchbar } from "./component/searchbar";
 import { Banner } from "./component/banner";
 
-// import axios from "axios";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      id: "",
       img: "",
       brand: "",
       pro: "",
