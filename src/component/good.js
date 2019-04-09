@@ -38,6 +38,10 @@ export default class Good extends Component {
 
 //jonathons delete
 
-  // deleteDeck = () => {
-  //   axios.delete("/api/data", { id })
+  // deleteDeck = (id) => {
+  //   axios.delete(`/api/data/${id}`, { data: {id}} ).then(response => {
+  //   this.setState({
+  //     allDecks.response.data
+  //   })
+  // })
   // }
