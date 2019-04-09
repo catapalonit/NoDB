@@ -11,13 +11,18 @@ export default class Good extends Component {
     };
   }
 
-  // deleteDeck = (id) => {
-  //   axios.delete(`/api/data/${id}`, { data: { id } }).then(response => {
-  //     this.setState({
-  //       allDecks: response.data
-  //     })
-  //   })
-  // }
+  deleteDeck = (id) => {
+    axios.delete(`/api/data/${id}`, { data: { id } }).then(response => {
+      this.props.refresh(response.data)
+    })
+  }
+
+  updateDeck = (id) => {
+    console.log('hit')
+    axios.put(`/api/data/${id}`, { data: { id } }).then(response => {
+      this.props.refresh(response.data)
+    })
+  }
 
   render() {
     return (
@@ -30,7 +35,8 @@ export default class Good extends Component {
           <h3>{this.props.deck.model}</h3>
           <h3>{this.props.deck.size}</h3>
           <h3>{this.props.deck.comments}</h3>
-          <button className="deleteButton" > Delete </button>
+          <button className="deleteButton" onClick={() => this.deleteDeck(this.props.deck.id)} > Delete </button>
+          <button className="updateButton" onClick={() => this.updateDeck(this.props.deck.id)} > Update </button>
 
         </div>
         <br />
@@ -39,12 +45,3 @@ export default class Good extends Component {
     );
   }
 }
-
-
-//jonathons delete
-
-
-
-
-  // <button className="deleteButton" onClick={() => axios.delete("/api/data" + this.props.name)
-  //           .then(response => this.props.deleteData())}> Delete </button>

@@ -22,7 +22,11 @@ export default class Inputfield extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleGoodSubmit = this.handleGoodSubmit.bind(this);
         this.handleBadSubmit = this.handleBadSubmit.bind(this);
+        this.refreshAllDecks = this.refreshAllDecks.bind(this);
+    }
 
+    refreshAllDecks(arr) {
+        this.setState({ allDecks: arr }) //this handles refreshing the array so you dont refresh the page
     }
 
     componentDidMount() {
@@ -34,7 +38,6 @@ export default class Inputfield extends Component {
 
 
     handleChange(e) {
-        //image: vfdknd
         this.setState({ [e.target.name]: e.target.value })
         console.log("hit")
     }
@@ -52,9 +55,7 @@ export default class Inputfield extends Component {
             likesBoard: true
         }).then(response => {
             console.log(response)
-            // this.setState({ [e.target.name]: e.target.value })
-
-            //update allDecks in state
+            this.setState({ allDecks: response.data }) //update allDecks in state
         });
     }
     handleBadSubmit(e) {
@@ -70,18 +71,14 @@ export default class Inputfield extends Component {
             likesBoard: false
         }).then(response => {
             console.log(response)
-            // this.setState({ [e.target.name]: e.target.value })
-
-            //update allDecks in state
-
+            this.setState({ allDecks: response.data }) //update allDecks in state
         });
     }
 
 
     render() {
-        let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} />) //Good.js holds what im rendering
-        let dislikesBoard = this.state.allDecks.filter(val => val.likesBoard === false).map(val => <Good deck={val} />)
-        // let totalBoard = this.state.allDecks.map(val => <Good deck={val} />)
+        let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} refresh={this.refreshAllDecks} />) //Good.js holds what im rendering
+        let dislikesBoard = this.state.allDecks.filter(val => val.likesBoard === false).map(val => <Good deck={val} refresh={this.refreshAllDecks} />)
         return (
             <div>
                 <form>
@@ -96,7 +93,6 @@ export default class Inputfield extends Component {
                     <button className="submitButton" type="reset" onClick={this.handleGoodSubmit.bind(this)} >I Liked This Board</button>
                     <button className="submitButton" type="reset" onClick={this.handleBadSubmit.bind(this)} >I Didn't Like This Board</button>
                 </form>
-                {/* {totalBoard} */}
                 <div className="allBoards">
                     <div className="goodBoardsOuter">
                         <div className="goodBoards">

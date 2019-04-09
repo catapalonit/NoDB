@@ -114,7 +114,8 @@ form {
   background: lightsalmon;
 }
 
-.deleteButton {
+.deleteButton,
+.updateButton {
    background: none;
 }
 
