@@ -1,5 +1,6 @@
 let allDecks = [
   {
+    id: 1,
     brand: "Baker",
     pro: "Cyril Jackson",
     model: "Issa Knife",
@@ -10,6 +11,7 @@ let allDecks = [
     likesBoard: true
   },
   {
+    id: 2,
     brand: "Mother",
     pro: "Jake Johnson",
     model: "Bukkake",
@@ -21,6 +23,7 @@ let allDecks = [
 
   },
   {
+    id: 3,
     brand: "Deathwish",
     pro: "Lizard King",
     model: "Permanent Vacation",

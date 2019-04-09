@@ -21,6 +21,9 @@ module.exports = {
   deleteData: (req, res) => {
     console.log(req.body)
     allDecks.delete(req.body)
+
+    const index = articles.findIndex(deck => deck.id === +req.params.id)
+    allDecks.splice(index, 1)
     res.status(200).json(allDecks)
   }
 };

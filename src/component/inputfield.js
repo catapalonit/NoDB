@@ -25,9 +25,9 @@ export default class Inputfield extends Component {
     }
 
     componentDidMount() {
-        axios.get("/api/data").then(results => {
-            console.log(results);
-            this.setState({ allDecks: results.data });
+        axios.get("/api/data").then(response => {
+            console.log(response);
+            this.setState({ allDecks: response.data });
         });
     }
 
@@ -78,7 +78,7 @@ export default class Inputfield extends Component {
 
 
     render() {
-        let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} />)
+        let likesBoard = this.state.allDecks.filter(val => val.likesBoard === true).map(val => <Good deck={val} />) //Good.js holds what im rendering
         let dislikesBoard = this.state.allDecks.filter(val => val.likesBoard === false).map(val => <Good deck={val} />)
         // let totalBoard = this.state.allDecks.map(val => <Good deck={val} />)
         return (
