@@ -19,10 +19,30 @@ export default class Good extends Component {
 
   updateDeck = (id) => {
     console.log('hit')
+
+    //change axios request so it sends along the text inside the conditionally rendered input field
     axios.put(`/api/data/${id}`, { data: { id } }).then(response => {
       this.props.refresh(response.data)
     })
   }
+
+  // updateDeck = (id) => {
+  //   console.log('hit')
+  //   axios.put("/api/data/" + id, (data: this.state.inputText)).then(response => {
+  //     this.props.refresh(response.data)
+  //   })
+  // }
+
+  // mykenzies put example 
+  // req.body = {}
+  // app.put("/api/data/:id", (req, res) => {
+  //     let { id } = req.params
+  //     let index = data.findIndex((val) => val.id === +req.params.id)
+  //     data[index].data = req.body.data
+  //     res.status(200).json{ data }
+  // });
+
+
 
   render() {
     return (

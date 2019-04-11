@@ -31,7 +31,6 @@ export default class Inputfield extends Component {
 
     componentDidMount() {
         axios.get("/api/data").then(response => {
-            console.log(response);
             this.setState({ allDecks: response.data });
         });
     }
@@ -39,7 +38,6 @@ export default class Inputfield extends Component {
 
     handleChange(e) {
         this.setState({ [e.target.name]: e.target.value })
-        console.log("hit")
     }
 
     handleGoodSubmit(e) {
@@ -56,7 +54,9 @@ export default class Inputfield extends Component {
         }).then(response => {
             console.log(response)
             this.setState({ allDecks: response.data }) //update allDecks in state
-        });
+        }).catch((e) => {
+            console.log(e);
+        })
     }
     handleBadSubmit(e) {
         e.preventDefault();
